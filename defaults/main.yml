@@ -1,0 +1,5 @@
+---
+# defaults file for docker-collector
+collector_container_name: collectorfordocker
+collector_image: outcoldsolutions/collectorfordocker:3.0.93.180531
+SPLURL: localhost
