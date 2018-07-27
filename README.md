@@ -25,7 +25,7 @@ container_name: splunk-demo
 
 | `docker_image` | stackware/spl:1.8 | Docker Image (incl.tag) |
 
-| `hec_token` | "token=abcd-efgh-123ada-0815" | HEC Token |
+| `hec_token` | "abcd-efgh-123ada-0815" | HEC Token |
 
 
 Example Playbook

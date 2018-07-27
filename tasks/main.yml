@@ -39,10 +39,10 @@
       - collector_data:/data/
     env:
       COLLECTOR__SPLUNK_URL: output.splunk__url=http://{{ item }}:8088/services/collector/event/1.0
-      COLLECTOR__SPLUNK_TOKEN: output.splunk__{{ hec_token }}
+      COLLECTOR__SPLUNK_TOKEN: output.splunk__token={{ hec_token }}
       COLLECTOR__SPLUNK_INSECURE: output.splunk__insecure=true
       COLLECTOR__EULA: general__acceptEULA=true
   when: 
-    - container_name is defined
-    - docker_image is defined
+    - collector_image is defined
+    - collector_container_name is defined
   with_items: "{{ groups['splunk'] }}"
